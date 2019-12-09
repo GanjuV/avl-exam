@@ -2,9 +2,8 @@ module.exports = (app) => {
     const notes = require('../controllers/note.controller.js');
     const readfile = require('../controllers/readfile.controller.js');
 
-    console.log(app)
     // Create a new Note
-    app.post('/api/getquestions', readfile.getQuestions);
+    app.get('/api/getCSVData', readfile.getCSVData);
 
 
     // Create a new Note

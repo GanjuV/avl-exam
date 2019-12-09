@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import DataService from '../../api/DataService';
 
 import './Home.css';
 class Home extends Component {
 
-  responseGoogle = (response) => {
-    console.log(response);
+  componentDidMount() {
+    this.getCSVData();
+  }
+
+  getCSVData = async () => {
+    const { data } = await DataService.get('/getCSVData')
+    console.log(data)
   }
 
   render() {

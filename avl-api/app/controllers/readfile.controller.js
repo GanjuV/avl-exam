@@ -1,11 +1,30 @@
+const csv = require("csvtojson");
 
 // Retrieve data
-exports.getQuestions = (req, res) => {
+exports.getCSVData = async (req, res) => {
   try {
-    const countQuestion = req.query.count;
-    const jsonData = require('../../filedata/QS1');
-    const dataFinal = jsonData.sort(() => 0.5 - Math.random()).slice(0, countQuestion);
-    res.send(dataFinal);
+    // require csvtojson
+
+    // Convert a csv file with csvtojson
+    csv()
+      .fromFile('../../filedata/restaurant_data.csv')
+      .then(function(jsonArrayObj){ //when parse finished, result will be emitted here.
+        console.log(jsonArrayObj); 
+        res.send(jsonArrayObj);
+      })
+
+    // // Parse large csv with stream / pipe (low mem consumption)
+    // csv()
+    //   .fromStream(readableStream)
+    //   .subscribe(function(jsonObj){ //single json object will be emitted for each csv line
+    //     // parse each json asynchronousely
+    //     return new Promise(function(resolve,reject){
+    //         asyncStoreToDb(json,function(){resolve()})
+    //     })
+    //   }) 
+
+    // //Use async / await
+    // const jsonArray = await csv().fromFile(filePath);
   } catch(err) {
     res.status(500).send({
       message: err.message || "Some error occurred while retrieving notes."

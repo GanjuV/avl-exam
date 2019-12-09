@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import GoogleLogin from 'react-google-login';
-
+import { Redirect } from 'react-router-dom';
 import './Welcome.css';
 class Welcome extends Component {
-  
+  state={
+    redirect: false
+  }
   responseGoogle = (response) => {
-    console.log(response);
+    if(response.w3.U3) {
+      this.setState({ redirect: true })
+    }
   }
 
   render() {
+    if(this.state.redirect) {
+      return <Redirect to={'/home'} />;
+    }
     return (
       <div>
         <GoogleLogin
