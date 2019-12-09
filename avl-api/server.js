@@ -53,6 +53,6 @@ require('./app/routes/note.routes.js')(app);
 
 
 // listen for requests
-app.listen(3100, '0.0.0.0', () => {
-    console.log("Server is listening on port 3100");
+app.listen(3200, '0.0.0.0', () => {
+    console.log("Server is listening on port 3200");
 });
