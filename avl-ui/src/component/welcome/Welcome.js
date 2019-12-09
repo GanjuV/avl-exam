@@ -17,15 +17,16 @@ class Welcome extends Component {
       return <Redirect to={'/home'} />;
     }
     return (
-      <div>
-        <GoogleLogin
+        <div class="ui segment raised padded text container segment top-gap">
+          <h1 class="ui header">Please login using google credentials</h1>
+          <GoogleLogin
           clientId="398789350053-ic1gl83lsukfbsnna2cfeartp56iqq3a.apps.googleusercontent.com"
           buttonText="Login"
           onSuccess={this.responseGoogle}
           onFailure={this.responseGoogle}
           cookiePolicy={'single_host_origin'}
         />
-      </div>
+        </div>
     )
   }
 }

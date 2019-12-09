@@ -1,7 +1,7 @@
 {
-  "name": "node-easy-notes-app",
+  "name": "node-avl-app",
   "version": "1.0.0",
-  "description": "Never miss a thing in Life. Take notes quickly. Organize and keep track of all your notes.",
+  "description": "Node express app for rest api server",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +10,9 @@
     "Express",
     "RestAPI",
     "MongoDB",
-    "Mongoose",
-    "Notes"
+    "Mongoose"
   ],
-  "author": "callicoder",
+  "author": "Vaibhav Ganju",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",

@@ -1,13 +1,14 @@
 const csv = require("csvtojson");
+const path = require('path');
 
 // Retrieve data
 exports.getCSVData = async (req, res) => {
   try {
     // require csvtojson
-
+    const csvpath = path.join(__dirname, '../../filedata/restaurant_data.csv');
     // Convert a csv file with csvtojson
     csv()
-      .fromFile('../../filedata/restaurant_data.csv')
+      .fromFile(csvpath)
       .then(function(jsonArrayObj){ //when parse finished, result will be emitted here.
         console.log(jsonArrayObj); 
         res.send(jsonArrayObj);
