@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/avl-exam/precache-manifest.72dff9dd3645dae5e5cf9300d0ad018d.js"
+  "/my-app/precache-manifest.95303cad89507b5c76530543b3f3376e.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -33,7 +33,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/avl-exam/index.html"), {
+workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/my-app/index.html"), {
   
   blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
 });
