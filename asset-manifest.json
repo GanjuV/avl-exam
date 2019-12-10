@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/avl/static/css/main.527ffdd7.chunk.css",
-    "main.js": "/avl/static/js/main.91068ffe.chunk.js",
-    "main.js.map": "/avl/static/js/main.91068ffe.chunk.js.map",
-    "runtime-main.js": "/avl/static/js/runtime-main.46eb8068.js",
-    "runtime-main.js.map": "/avl/static/js/runtime-main.46eb8068.js.map",
-    "static/js/2.6a97375d.chunk.js": "/avl/static/js/2.6a97375d.chunk.js",
-    "static/js/2.6a97375d.chunk.js.map": "/avl/static/js/2.6a97375d.chunk.js.map",
-    "index.html": "/avl/index.html",
-    "precache-manifest.5458f31cdf4d7cb370dc9445bc32c649.js": "/avl/precache-manifest.5458f31cdf4d7cb370dc9445bc32c649.js",
-    "service-worker.js": "/avl/service-worker.js",
-    "static/css/main.527ffdd7.chunk.css.map": "/avl/static/css/main.527ffdd7.chunk.css.map",
-    "static/js/2.6a97375d.chunk.js.LICENSE": "/avl/static/js/2.6a97375d.chunk.js.LICENSE"
+    "main.css": "/avl-ui/static/css/main.527ffdd7.chunk.css",
+    "main.js": "/avl-ui/static/js/main.91068ffe.chunk.js",
+    "main.js.map": "/avl-ui/static/js/main.91068ffe.chunk.js.map",
+    "runtime-main.js": "/avl-ui/static/js/runtime-main.08b1d000.js",
+    "runtime-main.js.map": "/avl-ui/static/js/runtime-main.08b1d000.js.map",
+    "static/js/2.6a97375d.chunk.js": "/avl-ui/static/js/2.6a97375d.chunk.js",
+    "static/js/2.6a97375d.chunk.js.map": "/avl-ui/static/js/2.6a97375d.chunk.js.map",
+    "index.html": "/avl-ui/index.html",
+    "precache-manifest.f98118c26b7d8f072891895dd7c42e62.js": "/avl-ui/precache-manifest.f98118c26b7d8f072891895dd7c42e62.js",
+    "service-worker.js": "/avl-ui/service-worker.js",
+    "static/css/main.527ffdd7.chunk.css.map": "/avl-ui/static/css/main.527ffdd7.chunk.css.map",
+    "static/js/2.6a97375d.chunk.js.LICENSE": "/avl-ui/static/js/2.6a97375d.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.46eb8068.js",
+    "static/js/runtime-main.08b1d000.js",
     "static/js/2.6a97375d.chunk.js",
     "static/css/main.527ffdd7.chunk.css",
     "static/js/main.91068ffe.chunk.js"
