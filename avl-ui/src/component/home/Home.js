@@ -19,7 +19,6 @@ class Home extends Component {
   }
 
   renderList() {
-    console.log("called",this.state.searchedData)
     return this.state.searchedData.map( (obj,index) => {
       const name = obj[Object.keys(obj)[0]];
       const time = obj[Object.keys(obj)[1]];
@@ -34,11 +33,23 @@ class Home extends Component {
 
   filterData(time) {
     const currentDay = new Date().getDay();
-    const currentTime = new Date().getHours().toString() + new Date().getMinutes().toString();
+    const currentMin = new Date().getMinutes() < 10 ? "0"+new Date().getMinutes().toString(): new Date().getMinutes().toString();
+    const currentTime = new Date().getHours().toString() + currentMin;
     let openedTime = '';
     const dayArry = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
     openedTime += time.split('/').filter( ele => {
-      const indexOfMatchedDay = ele.indexOf(dayArry[currentDay]);
+      const daySplitArry = ele.trim().split(" ")[0].replace(',','').split("-");
+      let indexOfMatchedDay = -1 ;//ele.indexOf(dayArry[currentDay]);
+      if (daySplitArry.length > 1) {
+        const dayOne = dayArry.indexOf(daySplitArry[0]);
+        const dayTwo = dayArry.indexOf(daySplitArry[1]);
+        if(dayOne > -1 || dayTwo > -1) {
+          indexOfMatchedDay = 0;
+        }
+      } else {
+        indexOfMatchedDay = dayArry.indexOf(daySplitArry[0]);
+      }
       if(indexOfMatchedDay > -1) {
         const splitBlank = ele.split(" ");
         const timeAM = this.convertTimeInHrs(`${splitBlank[splitBlank.indexOf("am") - 1]} AM`);
@@ -48,7 +59,6 @@ class Home extends Component {
             return ele;
           }
         }
-
       }
     })
     if(openedTime !== '') {
@@ -90,11 +100,11 @@ class Home extends Component {
 
   render() {
     return (
-      this.state.data &&
+      this.state.searchedData &&
       <div className="ui container ui segment margin-top">
         <SearchBar onFormSubmit={this.onTermSubmit} />
         <div className="field">
-          <label><h2 class="ui header">List of Open Restaurant</h2></label>
+          <label><h2 className="ui header">List of Open Restaurant</h2></label>
         </div>
         <table className="ui celled table">
           <thead>
